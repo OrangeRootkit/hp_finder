@@ -1,0 +1,237 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  body {
+    font-family: "Inter", sans-serif;
+    background-color: #F5F5F5;
+    font-weight: 400;
+    font-size: 16px;
+  }
+
+  .container {
+    max-width: 688px;
+    margin: 0 auto;
+  }
+
+  .header {
+    padding-top: 64px;
+  }
+
+  .title {
+    font-size: 64px;
+    font-weight: 700;
+    line-height: 77.45px;
+    letter-spacing: -2%;
+  }
+
+  .subtitle {
+    font-weight: 400;
+    font-size: 21px;
+    line-height: 36px;
+    margin-bottom: 48px;
+  }
+
+  .school__wrapper {
+    display: flex;
+    justify-content: space-between;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 28px;
+    color: #818182;
+  }
+
+  .school {
+    margin-right: 100px;
+  }
+
+  .input__wrapper {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 40px;
+  }
+
+  .input__label {
+    display: block;
+    color: #818182;
+    line-height: 28px;
+    font-size: 16px;
+  }
+
+
+
+  .input {
+    display: block;
+    width: 452px;
+    height: 38px;
+    padding: 9px 0 8px 17px;
+    border: 1px solid #CED4DA;
+    border-radius: 4px;
+    color: #000;
+    outline: 0;
+
+  }
+
+  input::placeholder {
+    color: #818182;
+  }
+
+  .select__label {
+    display: block;
+    color: #818182;
+    line-height: 28px;
+    font-size: 16px;
+  }
+
+  .select__option {
+    color: #818182;
+  }
+
+  .select {
+    display: block;
+    width: 216px;
+    height: 38px;
+    padding: 9px 0 8px 17px;
+    border: 1px solid #CED4DA;
+    border-radius: 4px;
+    background-color: #fff;
+    color: #ABB5BE;
+  }
+
+
+  .line {
+    max-width: 1440px;
+    height: 1px;
+    margin: 0 auto;
+    border: 1px solid #DEE2E6;
+
+  }
+  .grid {
+    margin:  0 auto;
+    margin-top: 40px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(2, auto);
+    gap: 20px;
+  }
+
+  .card {
+    display: block;
+    background-color: #fff;
+    border: 1px solid  #DEE2E6;
+    border-radius: 4px;
+  }
+
+  .image__wrapper {
+    width: 334px;
+    height: 192px;
+  }
+
+
+  .image {
+    display: block;
+    width: 334px;
+    height: 192px;
+    object-fit: cover;
+    object-position: top;
+
+  }
+
+  .card__text {
+    padding: 24px 25px ;
+  }
+
+  .text__name {
+    font-weight: 800;
+    font-size: 20px;
+    line-height: 24px;
+  }
+
+  .text__discription {
+    font-size: 14px;
+    line-height: 28px;
+  }
+
+  @media (max-width: 720px) {
+
+
+  .container {
+    max-width: 688px;
+    margin: 0 auto;
+    padding: 0 40px;
+  }
+
+  .title {
+    font-size: 52px;
+    line-height: 63px;
+  }
+
+
+  .subtitle {
+    font-size: 16px;
+    line-height: 28px;
+    margin-bottom: 28px;
+  }
+
+
+  .input {
+    display: block;
+    width: 100%;
+    height: 38px;
+    padding: 9px 0 8px 17px;
+    border: 1px solid #CED4DA;
+    border-radius: 4px;
+    color: #ABB5BE;
+    margin-bottom: 19px;
+
+  }
+
+  .select__label {
+    display: block;
+    color: #818182;
+    line-height: 28px;
+    font-size: 16px;
+  }
+
+  .select__option {
+    color: #818182;
+  }
+
+  .select {
+    display: block;
+    width: 100%;
+    height: 38px;
+    padding: 9px 0 8px 17px;
+    border: 1px solid #CED4DA;
+    border-radius: 4px;
+    background-color: #fff;
+    color: #ABB5BE;
+  }
+
+
+
+  .input__wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-bottom: 40px;
+  }
+
+    .grid {
+        margin:  0 auto;
+        margin-top: 40px;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(2, auto);
+        justify-items: center;
+
+        gap: 20px;
+      }
+    
+    /*
+    Стили для устройств, у которых ширина viewport меньше или равно 770 пикселей.
+    Это множество мобильных устройств
+    */
+  }
