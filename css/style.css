@@ -78,11 +78,18 @@
     color: #818182;
   }
 
+
+  input::-webkit-input-placeholder {
+    color: #818182;
+  }
+
+
   .select__label {
     display: block;
     color: #818182;
     line-height: 28px;
     font-size: 16px;
+    outline: 0;
   }
 
   .select__option {
@@ -230,8 +237,4 @@
         gap: 20px;
       }
     
-    /*
-    Стили для устройств, у которых ширина viewport меньше или равно 770 пикселей.
-    Это множество мобильных устройств
-    */
   }
