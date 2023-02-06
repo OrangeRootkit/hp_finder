@@ -4,12 +4,12 @@ const grid = document.querySelector('.grid');
 const input = document.querySelector('.input');
 const select = document.querySelector('.select');
 
-function getCard (obj) {
+function createCard (obj) {
     const card = document.createElement('div');
     card.className = 'card'; 
     card.innerHTML = 
     `<div class="image__wrapper">
-                        <img class='image' src=${obj.image} alt="pic">
+        <img class='image' src=${obj.image} alt="pic">
     </div>
     <div class="card__text">
         <p class="text__name">${obj.name}</p>
@@ -26,29 +26,21 @@ function getCard (obj) {
 function filterByInputSelect (event) {
     grid.innerHTML = '';
 
-    let inputEvent =input.value;
+    let inputEvent =input.value.toLowerCase().trim();
     let selectValue = select.value;
-    let newData = data;
 
     if (event.type == 'change') {
         inputEvent = '';
-        input.value ='';
+        input.value = '';
     };
 
-    newData =  data.filter((item)=>(item.house == selectValue || select.value == 'Choose one'));
-    newData.forEach((item)=>grid.append(getCard(item)));
+    let newData =  data.filter((item)=>(item.house == selectValue || select.value == 'Choose one'));
 
-    if (inputEvent != '') {
-    grid.innerHTML = '';
-
-    newData
-    .filter((item)=>
-    item.name.toLowerCase().includes(inputEvent.toLowerCase().trim()))
-    .forEach((item)=>grid.append(getCard(item)));
-    }
-}
+    newData.filter((item)=>item.name.toLowerCase().includes(inputEvent))
+    .forEach((item)=>grid.append(createCard(item)));
+};
 
 input.addEventListener('input', filterByInputSelect);
 select.addEventListener('change', filterByInputSelect);
 
-data.forEach((card)=>grid.append(getCard(card)))
+data.forEach((card)=>grid.append(createCard(card)));
